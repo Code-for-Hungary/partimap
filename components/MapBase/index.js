@@ -161,46 +161,5 @@ const Polygon = ({
 
 MapBase.Polygon = Polygon
 
-MapBase.SzkPolygon = ({
-  options = {},
-  ...rest
-}) => (
-  <Polygon
-    options={{
-      ...szkPolygonOptions,
-      ...options
-    }}
-    {...rest}
-  />
-)
-
-MapBase.ZipPolygon = ({
-  options = {},
-  ...rest
-}) => (
-  <Polygon
-    options={{
-      ...zipPolygonOptions,
-      ...options
-    }}
-    {...rest}
-  />
-)
-
-MapBase.EvkPolygon = ({
-  options = {},
-  unfilled,
-  ...rest
-}) => (
-  <Polygon
-    options={{
-      ...evkPolygonOptions,
-      ...options,
-      fillOpacity: unfilled ? 0 : .3,
-    }}
-    {...rest}
-  />
-)
-
 
 export default MapBase

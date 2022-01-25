@@ -20,8 +20,9 @@ export default function Home() {
           zoom={15}
           // mapId="85b71dbefa7b82fa"
         >
-          {partyPolygons.features.map(({ geometry }) => (
+          {partyPolygons.features.map(({ geometry }, i) => (
             <MapBase.Polygon
+              key={i}
               geometry={geometry}
               options={{
                 fillOpacity: .08,
